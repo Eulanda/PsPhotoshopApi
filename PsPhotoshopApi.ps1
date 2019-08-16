@@ -44,8 +44,8 @@ Function Open-Photoshop() {
     [int] $PsDisplayNoDialogs = 3
 
     try {
-        $Script:PsObj = New-Object -ComObject "Photoshop.Application.130"
-        $Script:ExportObj = New-Object -ComObject "Photoshop.ExportOptionsSaveForWeb.130"
+        $Script:PsObj = New-Object -ComObject "Photoshop.Application"
+        $Script:ExportObj = New-Object -ComObject "Photoshop.ExportOptionsSaveForWeb"
 
         # Save Defaults
         $Script:OldRulerUnits = $Script:PsObj.Preferences.RulerUnits 
